@@ -226,12 +226,12 @@ a {
 .hero-section>img:first-child {
     top: 10%;
     left: 5%;
-    width: 120px;
+    width: 100px;
 }
 
 .hero-section>img:nth-child(2) {
-    top: 15%;
-    right: 8%;
+    top: 10%;
+    right: 5%;
     width: 100px;
 }
 
@@ -624,6 +624,55 @@ a {
     width: 100%;
 }
 
+.modal {
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    z-index: 9999;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--accent-color);
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content p {
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.success {
+    color: #28a745;
+}
+
+.error {
+    color: #dc3545;
+}
+
 /* ================= SHARE SECTION ================= */
 .share-section {
     padding: 4rem 0;
@@ -641,13 +690,13 @@ a {
 
 .share-section>img:first-child {
     top: 313px;
-    left: 800px;
+    left: 700px;
     width: 128px;
 }
 
 .share-section>img:nth-child(2) {
     top: 100px;
-    left: 712px;
+    left: 600px;
     width: 137px;
 }
 
@@ -727,12 +776,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .share-image img {
-    width: 100%;
-    max-width: 577px;
+    width: 400%;
+    max-width: 700px;
     height: auto;
+
 }
 
 /* ================= FOOTER ================= */

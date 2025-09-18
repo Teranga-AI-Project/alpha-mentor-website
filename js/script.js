@@ -64,6 +64,56 @@ document.addEventListener('keydown', function (event) {
         mobileToggle.focus(); /* Remettre le focus sur le bouton */
     }
 });
+// Form submission handling
+const form = document.getElementById('contactForm');
+const modal = document.getElementById('formModal');
+const modalMessage = document.getElementById('modalMessage');
+const closeBtn = document.querySelector('.modal .close');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    const formData = new FormData(form);
+    const action = form.getAttribute('action');
+
+    try {
+        const response = await fetch(action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            modalMessage.textContent = 'Message envoyé avec succès !';
+            modalMessage.classList.remove('error');
+            modalMessage.classList.add('success');
+            form.reset(); // Reset form fields
+        } else {
+            throw new Error('Échec de l\'envoi du message.');
+        }
+    } catch (error) {
+        modalMessage.textContent = 'Erreur lors de l\'envoi du message. Veuillez réessayer.';
+        modalMessage.classList.remove('success');
+        modalMessage.classList.add('error');
+    }
+
+    // Show modal
+    modal.style.display = 'flex';
+
+    // Close modal on click
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
 
 /* Sélectionne l'élément pour afficher l'année */
 const yearElement = document.getElementById('current-year');

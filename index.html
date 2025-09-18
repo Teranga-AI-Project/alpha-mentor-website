@@ -190,83 +190,92 @@
                     <img src="images/contact.png" alt="Contact">
 
                     <div class="contact-form">
-                        <form action="">
-                            <input type="text" placeholder="Nom complet" required>
-                            <input type="email" placeholder="Adresse mail" required>
-                            <input type="text" placeholder="Sujet" required>
-                            <textarea rows="4" placeholder="Votre Message" required></textarea>
+                        <form action="https://formsubmit.co/infos@terangaai.com" method="POST">
+                            <input type="text" name="nom" placeholder="Nom complet *" required>
+                            <input type="email" name="email" placeholder="Adresse mail *" required>
+                            <input type="text" name="sujet" placeholder="Sujet *" required>
+                            <textarea rows="4" name="message" placeholder="Votre Message *" required></textarea>
                             <button type="submit" class="btn">Envoyer</button>
                         </form>
+                        <div id="formModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p id="modalMessage"></p>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
             </div>
 
-            <!-- =================== SHARE SECTION ================== -->
-            <section class="share-section" id="share">
-                <img src="images/book.png" alt="">
-                <img src="images/brain.png" alt="">
-                <div class="container">
-                    <div class="share-grid">
-                        <div class="share-content">
-                            <h2 class="share-title">Prenez soin de votre santé mentale et téléchargez Alpha Mentor</h2>
-                            <p class="share-description">
-                                Grâce à un accompagnement bienveillant, des rappels pour respirer, et des contenus
-                                inspirants
-                            </p>
-                            <div class="share-buttons">
-                                <a href="" class="share-btn">
-                                    <i class="fab fa-apple"></i> App store
-                                </a>
-                                <a href="" class="share-btn">
-                                    <i class="fab fa-google-play"></i> Google play
-                                </a>
-                            </div>
-                        </div>
-                        <div class="share-image">
-                            <img src="images/sharing.png" alt="Alpha Mentor App Interface">
-                        </div>
-                    </div>
-                </div>
-            </section>
+        </section>
 
-            <!-- =================== FOOTER SECTION ================== -->
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer-container">
-                        <div class="footer-left">
-                            <img src="images/logo.png" alt="Alpha Mentor Logo" class="footer-logo">
 
-                            <div class="social-icons">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                                <a href="#"><i class="fab fa-tiktok"></i></a>
-                            </div>
-                        </div>
-                        <div class="footer-right">
-                            <ul>
-                                <li><a href="#hero">Accueil</a></li>
-                                <li><a href="#features">Fonctionnalités</a></li>
-                                <li><a href="#advantages">Avantages</a></li>
-                            </ul>
-                            <a href="" class="btn">
-                                <i class="fa fa-qrcode" aria-hidden="true"></i> Télécharger l'app
+        <!-- =================== SHARE SECTION ================== -->
+        <section class="share-section" id="share">
+            <img src="images/book.png" alt="">
+            <img src="images/brain.png" alt="">
+            <div class="container">
+                <div class="share-grid">
+                    <div class="share-content">
+                        <h2 class="share-title">Prenez soin de votre santé mentale et téléchargez Alpha Mentor</h2>
+                        <p class="share-description">
+                            Grâce à un accompagnement bienveillant, des rappels pour respirer, et des contenus
+                            inspirants
+                        </p>
+                        <div class="share-buttons">
+                            <a href="" class="share-btn">
+                                <i class="fab fa-apple"></i> App store
+                            </a>
+                            <a href="" class="share-btn">
+                                <i class="fab fa-google-play"></i> Google play
                             </a>
                         </div>
                     </div>
-                    <div class="footer-bottom">
-                        <p>Copyright <span id="current-year"></span> Teranga AI, Tous droits réservés</p>
-                        <div class="footer-links">
-                            <a href="#">Mentions légales</a>
-                            <a href="#">Politique de confidentialité</a>
-                        </div>
+                    <div class="share-image">
+                        <img src="images/sharing.png" alt="Alpha Mentor App Interface">
                     </div>
                 </div>
-            </footer>
+            </div>
+        </section>
 
-            <script src="js/script.js"></script>
+        <!-- =================== FOOTER SECTION ================== -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <img src="images/logo.png" alt="Alpha Mentor Logo" class="footer-logo">
+
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <ul>
+                            <li><a href="#hero">Accueil</a></li>
+                            <li><a href="#features">Fonctionnalités</a></li>
+                            <li><a href="#advantages">Avantages</a></li>
+                        </ul>
+                        <a href="" class="btn">
+                            <i class="fa fa-qrcode" aria-hidden="true"></i> Télécharger l'app
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Copyright <span id="current-year"></span> Teranga AI, Tous droits réservés</p>
+                    <div class="footer-links">
+                        <a href="#">Mentions légales</a>
+                        <a href="#">Politique de confidentialité</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
 </body>
 
 </html>
