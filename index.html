@@ -7,6 +7,8 @@
     <title>Alpha Mentor - Application de mentorat basé sur l'IA</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="shortcut icon" href="images/favicon.svg">
+
 </head>
 
 <body>
@@ -185,17 +187,18 @@
                     <h2 class="contact-title">Contactez-nous</h2>
                     <p class="contact-description">
                         Échangeons pour répondre à tes questions ou t’accompagner dans tes premiers pas avec Alpha
-                        Mentors.
+                        Mentor.
                     </p>
                     <img src="images/contact.png" alt="Contact">
 
                     <div class="contact-form">
-                        <form action="https://formsubmit.co/infos@terangaai.com" method="POST">
-                            <input type="text" name="nom" placeholder="Nom complet *" required>
-                            <input type="email" name="email" placeholder="Adresse mail *" required>
-                            <input type="text" name="sujet" placeholder="Sujet *" required>
-                            <textarea rows="4" name="message" placeholder="Votre Message *" required></textarea>
-                            <button type="submit" class="btn">Envoyer</button>
+                        <form id="contactForm" method="POST">
+                            <input type="text" name="nom" id="nom" placeholder="Nom complet *" required>
+                            <input type="email" name="email" id="email" placeholder="Adresse mail *" required>
+                            <input type="text" name="sujet" id="sujet" placeholder="Sujet *" required>
+                            <textarea rows="4" name="message" id="message" placeholder="Votre Message *"
+                                required></textarea>
+                            <button type="submit" id="sendBtn" class="btn">Envoyer</button>
                         </form>
                         <div id="formModal" class="modal">
                             <div class="modal-content">
@@ -276,6 +279,9 @@
         </footer>
 
         <script src="js/script.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script src="js/contact.js"></script>
 </body>
 
 </html>

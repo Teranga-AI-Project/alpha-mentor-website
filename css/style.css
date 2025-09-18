@@ -434,6 +434,8 @@ a {
     height: 869px;
     object-fit: cover;
     object-position: center bottom;
+
+
 }
 
 /* ===================ADVANTAGES SECTION================== */
@@ -625,52 +627,53 @@ a {
 }
 
 .modal {
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    z-index: 9999;
     display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
     background-color: var(--accent-color);
-    padding: 20px 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
     text-align: center;
-    position: relative;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .modal-content p {
-    margin: 0 0 20px;
-    font-size: 16px;
+    font-size: 18px;
+    margin: 10px 0;
+    font-family: var(--font-family);
+}
+
+.modal-content .success {
+    color: green;
+}
+
+.modal-content .error {
+    color: red;
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
+    color: var(--primary-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
-    color: #333;
 }
 
-.close:hover {
-    color: #000;
-}
-
-.success {
-    color: #28a745;
-}
-
-.error {
-    color: #dc3545;
+.close:hover,
+.close:focus {
+    color: black;
 }
 
 /* ================= SHARE SECTION ================= */
@@ -718,6 +721,7 @@ a {
     padding: 4rem;
     max-width: 1272px;
     margin: 0 auto;
+
 }
 
 .share-content {
@@ -783,7 +787,7 @@ a {
     width: 400%;
     max-width: 700px;
     height: auto;
-
+    transform: translateY(65px);
 }
 
 /* ================= FOOTER ================= */
@@ -944,7 +948,9 @@ a {
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 968px) {
+
+
+@media (max-width: 1100px) {
     .nav__right {
         display: none;
     }
@@ -963,6 +969,8 @@ a {
         gap: 2rem;
         padding: 2rem;
         text-align: center;
+        min-height: auto;
+        overflow: visible;
     }
 
     .feature-content {
@@ -971,11 +979,20 @@ a {
     }
 
     .feature-image {
-        display: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        order: 1;
+        height: auto;
     }
 
-    .feature-title {
-        font-size: 2rem;
+    .feature-image img {
+        position: static;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        transform: translateY(20px);
+        object-fit: cover;
     }
 
     .features-grid.reverse {
@@ -985,9 +1002,23 @@ a {
         text-align: center;
     }
 
+    .features-grid.reverse .feature-image {
+        order: 1;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .features-grid.reverse .feature-image img {
+        position: static;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        transform: translateY(20px);
+        object-fit: contain;
+    }
+
     .advantages-section {
         text-align: center;
-
     }
 
     .advantages-grid {
@@ -1067,7 +1098,19 @@ a {
     }
 
     .share-image {
-        display: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 1;
+    }
+
+    .share-image img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        transform: translateY(30px);
+        /* Descend l'image manuellement */
+        object-fit: cover;
     }
 
     .share-title {
@@ -1116,8 +1159,6 @@ a {
     }
 }
 
-
-
 @media (max-width: 768px) {
 
     .hero-section>img:first-child,
@@ -1146,7 +1187,6 @@ a {
         flex-direction: column;
         width: 100%;
         justify-content: center;
-
     }
 
     .hero-btn {
@@ -1216,6 +1256,17 @@ a {
     .share-btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .share-image img {
+        max-width: 250px;
+        transform: translateY(23px);
+    }
+
+    .feature-image img,
+    .features-grid.reverse .feature-image img {
+        max-width: 250px;
+        transform: translateY(15px);
     }
 
     .footer {
