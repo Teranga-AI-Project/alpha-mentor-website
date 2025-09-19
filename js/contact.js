@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Récupération des valeurs des champs
         const nom = document.getElementById('nom').value;
         const email = document.getElementById('email').value;
+        const phone_number = document.getElementById('phone_number').value;
         const sujet = document.getElementById('sujet').value;
         const message = document.getElementById('message').value;
 
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const params = {
             nom: nom,
             email: email,
+            phone_number: phone_number,
             sujet: sujet,
             message: message,
             time: new Date().toLocaleString('fr-FR')

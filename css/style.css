@@ -988,8 +988,8 @@ a {
 
     .feature-image img {
         position: static;
-        width: 100%;
-        max-width: 300px;
+        width: 600px;
+        max-width: 600px;
         height: auto;
         transform: translateY(20px);
         object-fit: cover;
@@ -1010,8 +1010,8 @@ a {
 
     .features-grid.reverse .feature-image img {
         position: static;
-        width: 100%;
-        max-width: 300px;
+        width: 600px;
+        max-width: 600px;
         height: auto;
         transform: translateY(20px);
         object-fit: contain;
@@ -1109,7 +1109,6 @@ a {
         max-width: 300px;
         height: auto;
         transform: translateY(30px);
-        /* Descend l'image manuellement */
         object-fit: cover;
     }
 
@@ -1259,13 +1258,13 @@ a {
     }
 
     .share-image img {
-        max-width: 250px;
+        max-width: 500px;
         transform: translateY(23px);
     }
 
     .feature-image img,
     .features-grid.reverse .feature-image img {
-        max-width: 250px;
+        max-width: 500px;
         transform: translateY(15px);
     }
 
