@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sujet: sujet,
             message: message,
             time: new Date().toLocaleString('fr-FR'),
-            to_email: 'naturelsaab@gmail.com'
+            to_email: 'contact@alpha-mentor.net'
         };
 
         // 🔹 Envoi EmailJS
