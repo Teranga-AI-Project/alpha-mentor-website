@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // 🔹 Initialisation EmailJS (Public Key)
-    emailjs.init('MpbTvarkPQ0JQqmrk');
+    emailjs.init('NKyrhz9ZgssgTJzVX');
 
     // 🔹 Récupération des éléments
     const form = document.getElementById('contactForm');
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // 🔹 Envoi EmailJS
-        emailjs.send('service_yowf74n', 'template_ildt7ev', params)
+        emailjs.send('service_ynowyuc', 'template_lpz2j0a', params)
             .then(function () {
                 modalMessage.textContent = 'Message envoyé avec succès !';
                 modalMessage.className = 'success';
